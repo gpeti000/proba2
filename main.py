@@ -6,6 +6,7 @@ from sklearn.linear_model import LinearRegression
 def fit_linear_regression(x,y):
     lr = LinearRegression()
     lr.fit(x.reshape(-1,1),y)
+    return lr
 
 def generate_synthetic_data(x, coefficients, seed=42, noise_std = 1):
     np.random.seed(seed)
@@ -29,7 +30,7 @@ def main():
     x_values = np.linspace(-10, 10, 100)
     x,y = generate_synthetic_data(x_values, coefficients)
     lr = fit_linear_regression(x,y)
-    visualize_data(x,y)
+    visualize_data(x,y, lr)
 
 if __name__ == '__main__':
     main()
