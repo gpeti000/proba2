@@ -7,5 +7,5 @@ def generate_synthetic_data(x, coefficients, seed=42, noise_std = 1):
     return x,y
 
 
-print("Hello")
+print("Helloaaa")
 print("Hello World!")
