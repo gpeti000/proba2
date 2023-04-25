@@ -8,7 +8,7 @@ def generate_synthetic_data(x, coefficients, seed=42, noise_std=1):
     return x, y
 
 
-def visualize_data(x, y):
+def visualize_date(x, y):
     plt.scatter(x, y)
     plt.xlabel("Feature (x)")
     plt.ylabel("Target (y)")
@@ -21,5 +21,3 @@ def main():
     x_values = np.linspace(-10, 10, 100)
     x, y = generate_synthetic_data(x_values, coefficients)
     visualize_data(x, y)
-
-main()
